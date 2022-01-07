@@ -1,0 +1,154 @@
+body {
+    background-color: #0068b4;
+    overflow: hidden;
+    font-family: "Cabin Condensed", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#fondo {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 1;
+    animation: 2s turnOn 1s linear forwards;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+#dotGrupo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    opacity: 0;
+    /*border: 1px solid yellow;*/
+}
+
+.dotContenedor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: calc(100% - 5px);
+    left: calc(50% - 5px);
+    background-color: white;
+    transform-origin: 5px -45px;
+}
+
+#leftCover,
+#rightCover {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background-color: #0068b4;
+}
+
+#derParte {
+    left: 50%;
+    opacity: 0;
+    /*animation: 4s derParteAll 1.6s step-start;*/
+}
+
+#izqParte {
+    opacity: 0;
+    /*animation: 3.8s izqParteAll 0s step-start;*/
+}
+
+#textoAbajo {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: calc(50% + 50px);
+    color: white;
+    font-weight: thin;
+}
+
+.dotContenedor > .dot {
+    transform: rotate(-30deg);
+}
+
+#footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 3px;
+    font-size: 12px;
+    text-align: right;
+    color: white;
+}
+
+#footer > p {
+    display: inline;
+}
+
+a {
+    color: white;
+}
+
+/* -- */
+
+@keyframes AllCirculos {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes AllCirculos2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(420deg);
+    }
+}
+
+@keyframes derParteAll {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes izqParteAll {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes turnOn {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
